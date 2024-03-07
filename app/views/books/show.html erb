@@ -1,0 +1,2 @@
+<p><%= @list.title %></p>
+<p><%= @list.body %></p>

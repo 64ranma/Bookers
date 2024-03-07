@@ -8,8 +8,16 @@ class BooksController < ApplicationController
     book.save
     redirect_to '/'
   end
+  
+  def index
+    @books = Book.all
+  end
 
-
+  def show
+   @book = Book.find(params[:id])
+  end
+ 
+ 
   private
   def book_params
     params.require(:book).permit(:title, :body)
